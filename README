@@ -1,0 +1,55 @@
+UFLDL assignment solution. (Andrew Ng's class)
+
+These are solutions to the exercises up at the Stanford OpenClassroom Deep Learning class and Andrew Ng's UFLDL Tutorial. 
+
+-----------------------------------
+1.Sparse Autoencoder:
+
+starter:  train.m
+implement: sampleIMAGES.m, sparseAutoencoderCost.m, computeNumericalGradient.m.
+
+2.Vectorized implementation:
+
+same with assignment 1
+
+3.Preprocessing-PCA and Whitening
+
+
+4.Softmax Regression:
+
+starter:  softmaxExercise.m
+implement: softmaxCost.m, computeNumericalGradient, 
+result: with-regulaization   without-regulaization
+
+5.Self-Taught Learning and Unsupervised Feature Learning:
+
+Starter: stl_exercise.m
+implement: 
+result: 98.254% "replacement" representation
+        98.365% "concatenation" representation
+        98.470% "replacement" representation + train autoencoder with unlabeledData[5-9] and trainData[0-4]
+
+6.Building Deep Networks for Classification:
+
+Starter:  stackedae_exercise.m
+implement: stackedAECost.m, stackedAEPredict.m, stackedAEExercise.m.
+
+
+7. Learning color features with Sparse Autoencoders:
+
+Starter:  linearDecoderExercise.m
+implement: sparseAutoencoderCost.m
+
+
+8. Convolution and Pooling:
+
+Starter:  cnnExercise.m
+implement: cnnConvolve.m, cnnPool.m
+
+
+-----------------------------------
+
+other links
+https://github.com/greeness/deep-learning
+https://github.com/danluu/UFLDL-tutorial
+https://github.com/dkyang/UFLDL-Tutorial-Exercise
