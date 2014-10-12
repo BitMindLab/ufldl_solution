@@ -37,12 +37,12 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 	implement: stackedAECost.m, stackedAEPredict.m, stackedAEExercise.m
 
 
-7. Learning color features with Sparse Autoencoders:
+7.Learning color features with Sparse Autoencoders:
 
 	Starter:  linearDecoderExercise.m
 	implement: sparseAutoencoderCost.m
 
-8. Convolution and Pooling:
+8.Convolution and Pooling:
 
 	Starter:  cnnExercise.m
 	implement: cnnConvolve.m, cnnPool.m
