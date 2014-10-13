@@ -24,17 +24,17 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 
 	starter:   softmaxExercise.m
 	implement: softmaxCost.m, computeNumericalGradient
-	dataset:   MNIST  training  digit [0-9], size 60,000*784; （28*28=784）
-	                  testing   digit [0-9], size 10,000*784;
+	dataset:   MNIST  * training  digit [0-9], size 60,000*784; （28*28=784）
+	                  * testing   digit [0-9], size 10,000*784;
 	result:    with-regulaization   without-regulaization
 
 5.Self-Taught Learning and Unsupervised Feature Learning:
 
 	starter:   stl_exercise.m
 	implement: 
-	dataset:   MNIST "unlabeledData" for autoencoder pretraining, digit [5-9], size 29,404*784;
-                         "trainData" for softmax pretraining,         digit [0-4], size 15,298*784;
-                         "testData" for testing,                      digit [0-4], size 15,298*784;
+	dataset:   MNIST * "unlabeledData" for autoencoder pretraining, digit [5-9], size 29,404*784;
+                         * "trainData" for softmax pretraining,         digit [0-4], size 15,298*784;
+                         * "testData" for testing,                      digit [0-4], size 15,298*784;
 	result:    98.254% "replacement representation";
 	           98.365% "concatenation representation";
 	           98.470% "replacement representation" + train autoencoder with unlabeledData [5-9] and trainData [0-4]
@@ -45,10 +45,10 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 	starter:   stackedae_exercise.m
 	implement: stackedAECost.m, stackedAEPredict.m, stackedAEExercise.m
 
-	dataset:   MNIST "trainData" for all pretraining,   digit [0-9], size 60,000*784;
-                         "testData" for testing,            digit [0-9], size 10,000*784;
-	result:    Before Finetuning Test Accuracy: 87.7%
-	           After Finetuning Test Accuracy:  97.6%
+	dataset:   MNIST * "trainData" for all pretraining,   digit [0-9], size 60,000*784;
+                         * "testData" for testing,            digit [0-9], size 10,000*784;
+	result:    Before Finetuning Test Accuracy: 87.780%
+	           After Finetuning Test Accuracy:  98.390%
 
 
 7.Learning color features with Sparse Autoencoders:
@@ -61,9 +61,9 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 
 	starter:   cnnExercise.m
 	implement: cnnConvolve.m, cnnPool.m
-	dataset:   reduced STL-10 dataset (4 classes, 64*64 images)
-                   trainImages size 100,000*196
-                   testImages  size 100,000*196
+	dataset:   reduced STL-10 dataset (4 classes, 64*64*3 images)
+                   trainImages size 2000
+                   testImages  size 3200
 
 
 -----------------------------------
