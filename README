@@ -64,6 +64,7 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 	dataset:   reduced STL-10 dataset (4 classes, 64*64*3 images)
                    trainImages size 2000
                    testImages  size 3200
+	result:    Accuracy: 80.406%
 
 
 -----------------------------------
