@@ -7,45 +7,63 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 -----------------------------------
 1.Sparse Autoencoder:
 
-	starter:  train.m
+	starter:   train.m
 	implement: sampleIMAGES.m, sparseAutoencoderCost.m, computeNumericalGradient.m
+	dataset:   10000 image patches (8*8) sampled from 10 images (512*512)
 
 2.Vectorized implementation:
 
-	same with assignment 1
+	starter:   train.m (actually stl_exercise.m)
+	implement: already finished in assignment 1 
+	dataset:   MNIST images without label (digits 5-9)
 
 3.Preprocessing-PCA and Whitening
 
 
 4.Softmax Regression:
 
-	starter:  softmaxExercise.m
+	starter:   softmaxExercise.m
 	implement: softmaxCost.m, computeNumericalGradient
-	result: with-regulaization   without-regulaization
+	dataset:   MNIST  training  digit [0-9], size 60,000*784; （28*28=784）
+	                  testing   digit [0-9], size 10,000*784;
+	result:    with-regulaization   without-regulaization
 
 5.Self-Taught Learning and Unsupervised Feature Learning:
 
-	Starter: stl_exercise.m
+	starter:   stl_exercise.m
 	implement: 
-	result: 98.254% "replacement" representation
-	        98.365% "concatenation" representation
-	        98.470% "replacement" representation + train autoencoder with unlabeledData[5-9] and trainData[0-4]
+	dataset:   MNIST "unlabeledData" for autoencoder pretraining, digit [5-9], size 29,404*784;
+                         "trainData" for softmax pretraining,         digit [0-4], size 15,298*784;
+                         "testData" for testing,                      digit [0-4], size 15,298*784;
+	result:    98.254% "replacement representation";
+	           98.365% "concatenation representation";
+	           98.470% "replacement representation" + train autoencoder with unlabeledData [5-9] and trainData [0-4]
+
 
 6.Building Deep Networks for Classification:
 
-	Starter:  stackedae_exercise.m
+	starter:   stackedae_exercise.m
 	implement: stackedAECost.m, stackedAEPredict.m, stackedAEExercise.m
+
+	dataset:   MNIST "trainData" for all pretraining,   digit [0-9], size 60,000*784;
+                         "testData" for testing,            digit [0-9], size 10,000*784;
+	result:    Before Finetuning Test Accuracy: 87.7%
+	           After Finetuning Test Accuracy:  97.6%
 
 
 7.Learning color features with Sparse Autoencoders:
 
-	Starter:  linearDecoderExercise.m
-	implement: sparseAutoencoderCost.m
+	starter:   linearDecoderExercise.m
+	implement: sparseAutoencoderLinearCost.m.
+	dataset:   stlSampledPatches  100,000*8*8 patches (sampled STL-10 dataset)
 
 8.Convolution and Pooling:
 
-	Starter:  cnnExercise.m
+	starter:   cnnExercise.m
 	implement: cnnConvolve.m, cnnPool.m
+	dataset:   reduced STL-10 dataset (4 classes, 64*64 images)
+                   trainImages size 100,000*196
+                   testImages  size 100,000*196
 
 
 -----------------------------------

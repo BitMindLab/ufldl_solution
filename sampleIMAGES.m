@@ -26,14 +26,24 @@ patches = zeros(patchsize*patchsize, numpatches);
 %  patch corresponding to the pixels in the block (21,21) to (30,30) of
 %  Image 1
 
-% my version
+% % matrix version 1 --wrong
 % image_id = randi(10,1,numpatches); % randomly sample images 10000 times
-% x = randi(512-7,1,numpatches); y = randi(512-7,1,numpatches);
-% s_patches = IMAGES(x:x+7, y:y+7,image_id); % square patch
-% patches = reshape(s_patches, 64, numpatches);  % in column-major order;
+% x = randi(512-8+1,1,numpatches);
+% y = randi(512-8+1,1,numpatches);
+% s_patches = IMAGES(x:x+8-1, y:y+8-1,image_id); % square patch
+% patches = reshape(s_patches, 64, numpatches);  % in column-major order
+
+% % matrix version 2 --wrong
+% image_id = randi(10,1,numpatches); % randomly sample images 10000 times
+% x = randi(512-8+1,1,numpatches);
+% y = randi(512-8+1,1,numpatches);
+% s_patches = permute(IMAGES,[3 1 2]);
+% s_patches = s_patches(image_id, x:x+8-1, y:y+8-1); % square patch
+% s_patches = permute(s_patches,[2 3 1]);
+% patches = reshape(s_patches, 64, numpatches);  % in column-major order
 
 
-% version 3
+% loop version
 for i = 1:numpatches
     x = randi(512-8+1);
     y = randi(512-8+1);
