@@ -41,8 +41,8 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 |"replacement representation"    | 98.254% | 96.771% |
 |"concatenation representation"  | 98.365% | 96.751% |
 
-conclusion: * the "concatenated representation" often works a little better, but higher complexity
-	    * unnormalized representation works a little worse than normalized representation, may caused by data 
+	conclusion: * the "concatenated representation" often works a little better, but higher complexity
+		    * unnormalized representation works a little worse than normalized representation, may caused by data 
 
 
 6.Building Deep Networks for Classification:
