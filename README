@@ -41,10 +41,10 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 		   96.771% "replacement representation" (unnormalized);
 	           96.751% "concatenation representation" (unnormalized [-13,10]);
 
-|First Header  | Second Header
-|------------- | -------------
-|Content Cell  | Content Cell
-|Content Cell  | Content Cell
+|  | normalized[0-1] | unnormalized
+|------------- | -------------| -------------
+|"replacement representation"    | 98.254% | 96.771%
+|"concatenation representation"  | 98.365% | 96.751%
 
 
 	conclusion: * the "concatenated representation" often works a little better, but higher complexity
