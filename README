@@ -35,9 +35,20 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 	dataset:   MNIST * "unlabeledData" for autoencoder pretraining, digit [5-9], size 29,404*784;
                      * "trainData" for softmax pretraining,         digit [0-4], size 15,298*784;
                      * "testData" for testing,                      digit [0-4], size 15,298*784;
-	result:    98.254% "replacement representation";
+	result:    98.254% "replacement representation" (normalized []);
 	           98.365% "concatenation representation";
 	           98.470% "replacement representation" + train autoencoder with unlabeledData [5-9] and trainData [0-4]
+		   96.771% "replacement representation" (unnormalized);
+	           96.751% "concatenation representation" (unnormalized [-13,10]);
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+
+	conclusion: * the "concatenated representation" often works a little better, but higher complexity
+		    * unnormalized representation works a little worse than normalized representation, may caused by data 
 
 
 6.Building Deep Networks for Classification:
@@ -49,6 +60,7 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
                      * "testData" for testing,            digit [0-9], size 10,000*784;
 	result:    Before Finetuning Test Accuracy: 87.780%
 	           After Finetuning Test Accuracy:  98.390%
+		   % "replacement representation" (unnormalized);
 
 
 7.Learning color features with Sparse Autoencoders:
