@@ -35,18 +35,10 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 	dataset:   MNIST * "unlabeledData" for autoencoder pretraining, digit [5-9], size 29,404*784;
                      * "trainData" for softmax pretraining,         digit [0-4], size 15,298*784;
                      * "testData" for testing,                      digit [0-4], size 15,298*784;
-	result:    98.254% "replacement representation" (normalized []);
-	           98.365% "concatenation representation";
-	           98.470% "replacement representation" + train autoencoder with unlabeledData [5-9] and trainData [0-4]
-		   96.771% "replacement representation" (unnormalized);
-	           96.751% "concatenation representation" (unnormalized [-13,10]);
-
-|  | normalized[0-1] | unnormalized |
-|------------- | -------------| ------------- |
-|"replacement representation"    | 98.254% | 96.771% |
-|"concatenation representation"  | 98.365% | 96.751% |
-
-
+		| Result | normalized [0-1] | unnormalized [-13,10] |
+		|------------- | -------------| ------------- |
+		|"replacement representation"    | 98.254% | 96.771% |
+		|"concatenation representation"  | 98.365% | 96.751% |
 	conclusion: * the "concatenated representation" often works a little better, but higher complexity
 		    * unnormalized representation works a little worse than normalized representation, may caused by data 
 
