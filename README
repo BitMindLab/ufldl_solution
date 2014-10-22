@@ -24,8 +24,8 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 
 	starter:   softmaxExercise.m
 	implement: softmaxCost.m, computeNumericalGradient
-	dataset:   MNIST  * training  digit [0-9], size 60,000*784; （28*28=784）
-	                  * testing   digit [0-9], size 10,000*784;
+	dataset:   MNIST  * training digit [0-9], size 60,000*784; （28*28=784）
+	                  * test digit [0-9], size 10,000*784;
 	result:    with-regulaization   without-regulaization
 
 5.Self-Taught Learning and Unsupervised Feature Learning:
@@ -36,10 +36,10 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
                      * "trainData" for softmax pretraining,         digit [0-4], size 15,298*784;
                      * "testData" for testing,                      digit [0-4], size 15,298*784;
 
-| Result | normalized [0-1] | unnormalized [-13,10] |
-|------------- | -------------| ------------- |
-|"replacement representation"    | 98.254% | 96.771% |
-|"concatenation representation"  | 98.365% | 96.751% |
+| Result | normalized [0,1] | unnormalized [-13,10] | train with RBM [0,1]  | train with RBM [-27,26]
+|------------- | -------------| ------------- | ------------- | ------------- |
+|"replacement representation"    | 98.254% | 96.771% | 97.689% | 96.627% |
+|"concatenation representation"  | 98.365% | 96.751% | 97.725% | 96.588% |
 
 	conclusion: * the "concatenated representation" often works a little better, but higher complexity
 		    * unnormalized representation works a little worse than normalized representation, may caused by data 
@@ -55,6 +55,7 @@ These are solutions to the exercises up at the Stanford OpenClassroom Deep Learn
 	result:    Before Finetuning Test Accuracy: 87.780%
 	           After Finetuning Test Accuracy:  98.390%
 		   % "replacement representation" (unnormalized);
+		   pretrain with RBM
 
 
 7.Learning color features with Sparse Autoencoders:
